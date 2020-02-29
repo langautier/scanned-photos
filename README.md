@@ -1,7 +1,7 @@
 # Issues with my collection of 30 years scanned photo
 I have more than 3 000 photos scanned from negatives with two issues 
 - A number of images were scanned with too high resolution which resulted in files being too large
-- The images were classified in the scanning order very far from chronological classification
+- The images were classified in the scanning order very far from chronological classification I need for my albums
 
 I wrote this utility for single use, so don't be angry with me if it's a little bit rustic. Converting and updating metadata is done through two proven programs to reduce the risk of image damage.
 
