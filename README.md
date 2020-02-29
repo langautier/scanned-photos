@@ -125,3 +125,22 @@ For Each sh In ActiveDocument.Shapes
     End If
 Next sh
 ```
+## VBA Get an object by key in a collection
+I imagine that the VBA designers did not want to write a potentially hateful performance routine. However, the possibility of finding an element from a key is often necessary and that sequential reading may not be too penalizing if the size of the list remains reasonable.
+```VBScript
+Property Get item(ByVal vID As Variant) As Shape
+Dim sh As Shape
+
+    Select Case VarType(vID)
+        Case vbString
+            For Each sh In aShapes
+                If StrComp(sh.name, vID) = 0 Then
+                    Set item = sh
+                    Exit For
+                End If
+            Next
+        Case vbLong, vbInteger, vbByte, vbDecimal
+            Set item = aShapes.item(vID)
+    End Select
+End Property
+```
