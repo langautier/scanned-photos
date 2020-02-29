@@ -69,3 +69,36 @@ End If
 '         this will allow later to easily free disk space just deleting _original
 msg = img_.Convert(original, "+repage", "-resize", size, "-density", "300x300", "-units", "PixelsPerInch", destination)
 ```
+## Build a sorted list of string in a table
+As there is no simple solution to sort a table of strings in VBA, the best way is to insert new elements directly at the right place
+```VBScript
+Dim aFileSize() As String
+Private Sub Class_Initialize()
+    ReDim aFileSize(0) As String
+End Sub
+Property Let fileSize(fsk() As String)
+' merge proposed device with our current list maintaining an alphabetical sorted list
+Dim i As Integer, nbkey As Integer
+    For Each fs In fsk
+        If aFileSize(0) = "" Then
+            aFileSize(0) = fs
+        Else
+            If UBound(filter(aFileSize, fs, True)) = -1 Then
+                nbkey = 1 + UBound(aFileSize)
+                ReDim Preserve aFileSize(nbkey)
+    
+                For i = nbkey To 1 Step -1
+                    prev = aFileSize(i - 1)
+                    If LCase(fs) > LCase(prev) Then
+                        aFileSize(i) = fs
+                        Exit For
+                    Else
+                        aFileSize(i) = prev
+                    End If
+                Next
+                If i = 0 Then aFileSize(i) = fs
+            End If
+        End If
+    Next
+End Property
+```
