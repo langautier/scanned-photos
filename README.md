@@ -26,6 +26,7 @@ Display to see this menu which allows you to:
     - __reset cache__ to delete the Exiftool cached files and force a new reading of metadata in the images files
     - __run__ to display in Word the selecting photos
     - __convert__ to resize all images over the targeted size
+    - __rename__ to rename files according to their CreateDate (the rest of my photo collection) - tested not completed
 
 ![Main screen](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
