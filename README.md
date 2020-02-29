@@ -1,4 +1,4 @@
-# Issues with my collection of 30 years scanned photo
+# Issues with my collection of 30 years scanned photos
 I have more than 3 000 photos scanned from negatives with two issues 
 - A number of images were scanned with too high resolution which resulted in files being too large
 - The images were classified in the scanning order very far from chronological classification I need for my albums
