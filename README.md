@@ -148,18 +148,18 @@ End Property
 # ExifTool Build a directory files metadata list in an XML file
 ```VBScript
 out = ExifCache_filename(name)
-'                                               -m (-ignoreMinorErrors)
-'                                               -X (-xmlFormat)
-'                                               -f (-forcePrint) Force printing of tags even if their values are not found
-'                                               -s print tag names instead of descriptions
-'                                               -L use Latin encoding for windows accentued characters é è... in keywords
+'                       -m (-ignoreMinorErrors)
+'                       -X (-xmlFormat)
+'                       -f (-forcePrint) Force printing of tags even if their values are not found
+'                       -s print tag names instead of descriptions
+'                       -L use Latin encoding for windows accentued characters é è... in keywords
 cmd = exifToolExe & " -m -X -s -f -L -charset filename=latin " & _
       "-directory -filename -ExifIFD:DateTimeOriginal -ExifIFD:CreateDate -XPKeywords -Artist -IFD0:Model -IFD0:Make -ProfileCreator -About -FileSize -Location -GPSposition -ImageSize -JFIF:resolutionunit -JFIF:XResolution -JFIF:YResolution -IFD0:Orientation -ext JPG " & _
       """" & imagesFolderPath & "\" & name & """"
 
 CreateObject("WScript.Shell").Run "cmd.exe /C " & cmd & " >""" & out & """", 0, True    ' bWaitOnReturn
 
-' even with the waitonreturn it may happen the loadfromfile failed as coming to soon
+' even with the waitonreturn it may happen the following file open failed as coming to soon
 Dim start As Single
 start = Timer                   ' number of seconds elapsed since midnight
 Do While Timer < start + 1
