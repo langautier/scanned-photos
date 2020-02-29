@@ -1,0 +1,4 @@
+Pas de la Case; 42.542911, 1.736371
+Saint-Étienne; 45.440712, 4.389466
+Saint-Malo; 48.652741, -2.023954
+Sölden, Autriche; 46.960015, 11.009306
