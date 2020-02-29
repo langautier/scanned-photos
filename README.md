@@ -76,29 +76,27 @@ Dim aFileSize() As String
 Private Sub Class_Initialize()
     ReDim aFileSize(0) As String
 End Sub
-Property Let fileSize(fsk() As String)
+Property Let fileSize(fs As String)
 ' merge proposed device with our current list maintaining an alphabetical sorted list
 Dim i As Integer, nbkey As Integer
-    For Each fs In fsk
-        If aFileSize(0) = "" Then
-            aFileSize(0) = fs
-        Else
-            If UBound(filter(aFileSize, fs, True)) = -1 Then
-                nbkey = 1 + UBound(aFileSize)
-                ReDim Preserve aFileSize(nbkey)
-    
-                For i = nbkey To 1 Step -1
-                    prev = aFileSize(i - 1)
-                    If LCase(fs) > LCase(prev) Then
-                        aFileSize(i) = fs
-                        Exit For
-                    Else
-                        aFileSize(i) = prev
-                    End If
-                Next
-                If i = 0 Then aFileSize(i) = fs
+If aFileSize(0) = "" Then
+    aFileSize(0) = fs
+Else
+    If UBound(filter(aFileSize, fs, True)) = -1 Then
+        nbkey = 1 + UBound(aFileSize)
+        ReDim Preserve aFileSize(nbkey)
+
+        For i = nbkey To 1 Step -1
+            prev = aFileSize(i - 1)
+            If LCase(fs) > LCase(prev) Then
+                aFileSize(i) = fs
+                Exit For
+            Else
+                aFileSize(i) = prev
             End If
-        End If
-    Next
+        Next
+        If i = 0 Then aFileSize(i) = fs
+    End If
+End If
 End Property
 ```
