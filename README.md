@@ -103,7 +103,7 @@ End Property
 ## VBA Build a sorted list of objects in a collection
 As there is no solution to sort items in a collection, the best way is to insert new elements directly at the right place
 ```VBScript
-' create a sorted collection of the shapes of our document
+' create a by name sorted collection of the shapes of our document
 Dim sh As Shape
 Set aShapes = New Collection
 For Each sh In ActiveDocument.Shapes
