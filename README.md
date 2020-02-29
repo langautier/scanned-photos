@@ -39,11 +39,12 @@ Once in word, you can select one or more photos and use buttons in the banner :
     - to order photos within a day, you can move using the Word cut/copy images then __set date__ on the right selection
 - __set artist__ to update the meta tag of the same name
 - __add a tag__ or __set all tags__ to update XPKeywords tag, even if I just have use it to clear previous value
-- __GPS address__ to set the location tag which is a strong *XPKeywords avoider* and well adapted with photos galleries tools. Ok, this will not be as perfect as having a GPS in the camera, but at that time they were not yet invented ! GPS list is get on the fly from a text file you can edit in a separate windows. GPS coordinates are the one in the Google map format.
+- __GPS address__ to set the location tag which is a strong *XPKeywords avoider* and well adapted with photos galleries tools. Ok, this will not be as perfect as having a GPS in the camera, but at that time they were not yet invented ! GPS list is get on the fly from a text file you can edit in a separate window. GPS coordinates are the one in the Google map format.
     
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/setGPS.png)
 
-# How to use it
+# Install it
+
 
 # Document how it is written
 ## Convert
