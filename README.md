@@ -3,6 +3,8 @@ I have more than 3 000 photos scanned from negatives with two issues
 - A number of images were scanned with too high resolution which resulted in files being too large
 - The images were classified in the scanning order very far from chronological classification
 
+I wrote this utility for single use, so don't be angry with me if it's a little bit rustic. Converting and updating metadata is done through two proven programs to reduce the risk of image damage.
+
 # Using Word to sort this out
 The need is to display images with text next to them and to be able to easily move when sorting. With the constraint that it is simple and quick to do given my current skills and the single use.
 So, Word and VBA will be the convenitent solution.
@@ -10,7 +12,6 @@ So, Word and VBA will be the convenitent solution.
 As a result, two additional tools are necessary :
 - [ImageMagick](https://imagemagick.org/) for resizing images files
 - [ExifTool](https://exiftool.org/) for reading, writing and editing meta information in images files
-
 
 # Main functionalities
 ## List and select images in you collection
