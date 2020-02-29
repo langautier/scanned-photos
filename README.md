@@ -13,11 +13,15 @@ As a result, two additional tools are necessary :
 
 
 # Main functionalities
+## List and select images in you collection
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
-
+## Sort photos by dates and edit meta tags
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/setGPS.png)
 
+# How to use it
+
+# Document how it is written
 ## Convert
 Convert is done using [ImageMagick](https://imagemagick.org/) targeting a photo properly printed on an A4 page which also means perfectly displayed on laptop or tablet.
 ```VBScript
