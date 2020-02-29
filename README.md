@@ -69,7 +69,7 @@ End If
 '         this will allow later to easily free disk space just deleting _original
 msg = img_.Convert(original, "+repage", "-resize", size, "-density", "300x300", "-units", "PixelsPerInch", destination)
 ```
-## VBA Build a sorted list of string in a table
+## VBA Build a sorted list of strings in a table
 As there is no simple solution to sort a table of strings in VBA, the best way is to insert new elements directly at the right place
 ```VBScript
 Dim aFileSize() As String
@@ -143,4 +143,27 @@ Dim sh As Shape
             Set item = aShapes.item(vID)
     End Select
 End Property
+```
+# ExifTool Build a directory files metadata list in an XML file
+```VBScript
+out = ExifCache_filename(name)
+'                                               -m (-ignoreMinorErrors)
+'                                               -X (-xmlFormat)
+'                                               -f (-forcePrint) Force printing of tags even if their values are not found
+'                                               -s print tag names instead of descriptions
+'                                               -L use Latin encoding for windows accentued characters é è... in keywords
+cmd = exifToolExe & " -m -X -s -f -L -charset filename=latin " & _
+        "-directory -filename -ExifIFD:DateTimeOriginal -ExifIFD:CreateDate -XPKeywords -Artist -IFD0:Model -IFD0:Make -ProfileCreator -About -FileSize -Location -GPSposition -ImageSize -JFIF:resolutionunit -JFIF:XResolution -JFIF:YResolution -IFD0:Orientation -ext JPG " & _
+        """" & imagesFolderPath & "\" & name & """"
+
+'   open and close the cmd command which is not very pleasant
+'   s = Split(CreateObject("wscript.shell").Exec(cmd).StdOut.ReadAll, "<rdf:Description rdf:about=")
+CreateObject("WScript.Shell").Run "cmd.exe /C " & cmd & " >""" & out & """", 0, True    ' bWaitOnReturn
+
+' even with the waitonreturn it may happen the loadfromfile failed as coming to soon
+Dim start As Single
+start = Timer                   ' number of seconds elapsed since midnight
+Do While Timer < start + 1
+    DoEvents
+Loop
 ```
