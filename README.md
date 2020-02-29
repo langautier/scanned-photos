@@ -154,11 +154,9 @@ out = ExifCache_filename(name)
 '                                               -s print tag names instead of descriptions
 '                                               -L use Latin encoding for windows accentued characters é è... in keywords
 cmd = exifToolExe & " -m -X -s -f -L -charset filename=latin " & _
-        "-directory -filename -ExifIFD:DateTimeOriginal -ExifIFD:CreateDate -XPKeywords -Artist -IFD0:Model -IFD0:Make -ProfileCreator -About -FileSize -Location -GPSposition -ImageSize -JFIF:resolutionunit -JFIF:XResolution -JFIF:YResolution -IFD0:Orientation -ext JPG " & _
-        """" & imagesFolderPath & "\" & name & """"
+      "-directory -filename -ExifIFD:DateTimeOriginal -ExifIFD:CreateDate -XPKeywords -Artist -IFD0:Model -IFD0:Make -ProfileCreator -About -FileSize -Location -GPSposition -ImageSize -JFIF:resolutionunit -JFIF:XResolution -JFIF:YResolution -IFD0:Orientation -ext JPG " & _
+      """" & imagesFolderPath & "\" & name & """"
 
-'   open and close the cmd command which is not very pleasant
-'   s = Split(CreateObject("wscript.shell").Exec(cmd).StdOut.ReadAll, "<rdf:Description rdf:about=")
 CreateObject("WScript.Shell").Run "cmd.exe /C " & cmd & " >""" & out & """", 0, True    ' bWaitOnReturn
 
 ' even with the waitonreturn it may happen the loadfromfile failed as coming to soon
