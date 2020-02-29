@@ -6,7 +6,8 @@ I have more than 3 000 photos scanned from negatives with two issues
 I wrote this utility for single use, so don't be angry with me if it's a little bit rustic. Converting and updating metadata is done through two proven programs to reduce the risk of image damage.
 
 # Using Word to sort this out
-The need is to display images with text next to them and to be able to easily move when sorting. With the constraint that it is simple and quick to do given my current skills and the single use.
+The need is to display images with text next to them and to be able to easily move when sorting. 
+I had a constraint that it is simple and quick to do given my current skills and the single use.
 So, Word and VBA will be the convenitent solution.
 
 As a result, two additional tools are necessary :
