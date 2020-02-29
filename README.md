@@ -26,7 +26,7 @@ Display to see this menu which allows you to:
     - __run__ to display in Word the selecting photos
     - __convert__ to resize all images over the targeted size
 
-![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
+![Main screen](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
 ## Sort photos by dates and edit meta tags
 Once in word, you can select one or more photos and use buttons in the banner :
@@ -44,7 +44,15 @@ Once in word, you can select one or more photos and use buttons in the banner :
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/setGPS.png)
 
 # Install it
+- First of all, you photos must be stored in directories as '1970' or '1970 summer holidays' and obviously in a test environment
+- Create your working directory as shown
+- Open the word file
+![Installation](https://github.com/langautier/scanned-photos/blob/master/installation.png)
 
+Knowing that :
+- __caches__ will contain the ExifTool metadata output files to avoid doing too often these quite slow operation
+- __originals__ to save files before the resize
+- __journal__ as a journal of every actions done by the program
 
 # Document how it is written
 ## Convert
