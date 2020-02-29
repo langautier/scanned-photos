@@ -54,7 +54,7 @@ Knowing that :
 - __originals__ to save files before the resize
 - __journal__ of every actions done by the program
 
-# Document how it is written
+# Code sharing
 Just for the pleasure to share some solutions I used in this program
 ## VBA resize a photo using ImageMagick
 Convert is done using [ImageMagick](https://imagemagick.org/) targeting a photo properly printed on an A4 page which also means perfectly displayed on laptop or tablet.
