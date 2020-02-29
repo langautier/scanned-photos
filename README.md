@@ -14,6 +14,11 @@ As a result, two additional tools are necessary :
 
 # Main functionalities
 ## List and select images in you collection
+Display to see this menu which allows you to:
+- select one or more photo directories
+- filter the selection according to the tags associated with the photo, the type of device or the size of the photo
+- and, using run, display in word the selecting photos
+
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
 ## Sort photos by dates and edit meta tags
