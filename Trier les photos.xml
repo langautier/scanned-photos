@@ -1,0 +1,19 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+	<ribbon>
+		<qat/>
+		<tabs>
+			<tab id="tab1" label="Edition photos" insertBeforeQ="TabInsert">
+				<group id="group1" label="Principal" imageMso="BlackAndWhite" autoScale="true">
+					<button id="set_date" 					label="Set Date"		imageMso="PersonaStatusAway" 			onAction="set_date"		screentip="Set create date"/>
+
+					<button id="set_artist" 				label="Set Artist"		imageMso="AddUserToPermissionGroup" 	onAction="set_artist"	screentip="Set artist"/>
+					<button id="set_tag" 		tag="add" 	label="Add tags"		imageMso="ArrangeByToDoStart" 			onAction="set_tags"		screentip="Add tags to existing ones"/>
+					<button id="set_tags" 		tag="all" 	label="Set all tags"	imageMso="DataGraphicIconSet" 			onAction="set_tags"		screentip="Replace all tags by new list"/>
+					<button id="display" 					label="Display"			imageMso="ApplyImageToBackgroundMenu" 	onAction="display"		screentip="Display photo"/>
+					<button id="delete" 					label="Delete photos"	imageMso="DeleteItem" 					onAction="delete"		screentip="Delete photo"/>
+					<dynamicMenu id="ListeGPS" label="GPS Addresses" getContent="AddGPS" invalidateContentOnDrop="true" size="normal" imageMso="ArrangeByLocation" screentip="Set GPS value"/>
+				</group>
+
+			</tab>
+	</ribbon>
+</customUI>
