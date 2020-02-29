@@ -17,7 +17,9 @@ As a result, two additional tools are necessary :
 Display to see this menu which allows you to:
 - select one or more photo directories
 - filter the selection according to the tags associated with the photo, the type of device or the size of the photo
-- and, using run, display in word the selecting photos
+- and use command button 
+-- __run__ to display in Word the selecting photos
+-- __convert__ to 
 
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
