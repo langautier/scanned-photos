@@ -30,7 +30,7 @@ Display to see this menu which allows you to:
 ![Main screen](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
 ## Sort photos by dates and edit meta tags
-Once in word, you can select one or more photos and use buttons in the banner :
+Once in Word, you can select one or more photos and use buttons in the banner :
 - __display__ to open the photo in the MS Photo editor
 - __set date__ to set the DateTimeOriginal according to following rules 
     - '1971:04:01 00:00:01' first day of the month and one minute after midnight meaning that theses values are just set to order the photos
