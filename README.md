@@ -17,7 +17,7 @@ As a result, two additional tools are necessary :
 Display to see this menu which allows you to:
 - select one or more photo directories
 - filter the selection according to the tags associated with the photo, the type of device or the size of the photo
-- and use command button as 
+- and use command button as:
     - __reset cache__ to delete the Exiftool cached files and force a new reading of metadata in the images files
     - __run__ to display in Word the selecting photos
     - __convert__ to resize all images over the targeted size
@@ -25,6 +25,18 @@ Display to see this menu which allows you to:
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
 ## Sort photos by dates and edit meta tags
+Once in word, you can select one or more photos and use buttons in the banner :
+- __display__ to open the photo in the MS Photo editor
+- __set date__ to set the DateTimeOriginal according to following rules 
+    - '1971:04:01 00:00:01' first day of the month and one minute after midnight meaning that theses values are just set to order the photos
+    - if you have several images in your selection, minutes will be incremented to avoid having to photos in the directory with the same name
+    - if you have set another year, the photo will be moved in the right directory (including creation if useful)
+    - after renaming, the images will be moved in the display as the right place according to your time
+    - to order photos within a day, you can move using the Word cut/copy images then __set date__ on the right selection
+- __set artist__ to update the meta tag of the same name
+- __add a tag__ or __set all tags__ to update XPKeywords tag, even if I just have use it to clear previous value
+- __GPS address__ to set the location tag which is a strong *XPKeywords avoider* and well adapted with photos galleries tools.  Ok
+    
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/setGPS.png)
 
 # How to use it
