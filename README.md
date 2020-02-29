@@ -58,7 +58,7 @@ Knowing that :
 # Code sharing
 Just for the pleasure to share some solutions I used in this program
 ## VBA resize a photo using ImageMagick
-Convert is done using [ImageMagick](https://imagemagick.org/) targeting a photo properly printed on an A4 page which also means perfectly displayed on laptop or tablet.
+My concern was to reduce files of more than 10 MB. The idea then is to say that if there are enough pixels to cover an A4 sheet at 300 dpi, then this will be suitable for both printed albums and for almost all screens.
 ```VBScript
 xy = Me.imageSize
 If Int(xy(0)) > Int(xy(1)) Then                         ' provide our target on the largest dimension
@@ -145,7 +145,8 @@ Dim sh As Shape
     End Select
 End Property
 ```
-# ExifTool Build a directory files metadata list in an XML file
+# VBA ExifTool Build a directory files metadata list in an XML file
+I tried a little before arriving at this solution which may be useful to others
 ```VBScript
 out = ExifCache_filename(name)
 '                       -m (-ignoreMinorErrors)
