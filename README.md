@@ -1,17 +1,20 @@
-# scanned-photos
+# Issues with my collection of 30 years scanned photo
 I have more than 3 000 photos scanned from negatives with two issues 
-- a lot of them have been scanned with an inapropriate setting and 
+- A number of images were scanned with too high resolution which resulted in files being too large
+- The images were classified in the scanning order very far from chronological classification
 
+# Using Word to sort this out
+The need is to display images with text next to them and to be able to easily move when sorting. With the constraint that it is simple and quick to do given my current skills and the single use.
+So, Word and VBA will be the convenitent solution.
 
-So, I d
-
+# Main functionalities
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
 
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/setGPS.png)
 
 ## Convert
-Convert is done using [ImageMagick](https://imagemagick.org/index.php)
+Convert is done using [ImageMagick](https://imagemagick.org/index.php) targeting a photo properly printed on an A4 page which also means perfectly displayed on laptop or tablet.
 ```VBScript
 xy = Me.imageSize
 If Int(xy(0)) > Int(xy(1)) Then                         ' provide our target on the largest dimension
