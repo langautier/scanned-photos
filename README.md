@@ -56,7 +56,7 @@ Knowing that :
 
 # Document how it is written
 Just for the pleasure to share some solutions I used in this program
-## Convert
+## VBA resize a photo using ImageMagick
 Convert is done using [ImageMagick](https://imagemagick.org/) targeting a photo properly printed on an A4 page which also means perfectly displayed on laptop or tablet.
 ```VBScript
 xy = Me.imageSize
@@ -69,7 +69,7 @@ End If
 '         this will allow later to easily free disk space just deleting _original
 msg = img_.Convert(original, "+repage", "-resize", size, "-density", "300x300", "-units", "PixelsPerInch", destination)
 ```
-## Build a sorted list of string in a table
+## VBA Build a sorted list of string in a table
 As there is no simple solution to sort a table of strings in VBA, the best way is to insert new elements directly at the right place
 ```VBScript
 Dim aFileSize() As String
@@ -77,7 +77,6 @@ Private Sub Class_Initialize()
     ReDim aFileSize(0) As String
 End Sub
 Property Let fileSize(fs As String)
-' merge proposed device with our current list maintaining an alphabetical sorted list
 Dim i As Integer, nbkey As Integer
 If aFileSize(0) = "" Then
     aFileSize(0) = fs
@@ -99,4 +98,30 @@ Else
     End If
 End If
 End Property
+```
+## VBA Build a sorted list of objects in a collection
+As there is no solution to sort items in a collection, the best way is to insert new elements directly at the right place
+```VBScript
+' create a sorted collection of the shapes of our document
+Dim sh As Shape
+Set aShapes = New Collection
+For Each sh In ActiveDocument.Shapes
+    If aShapes.count = 0 Then
+        aShapes.add sh, sh.name
+    Else
+        If sh.name < aShapes(1).name Then
+            aShapes.add sh, sh.name, aShapes(1).name
+        Else
+            For i = aShapes.count To 1 Step -1
+                lastnam = aShapes(i).name
+                If lastnam < sh.name Then Exit For
+            Next i
+            If i = aShapes.count Then
+                aShapes.add sh, sh.name
+            Else
+                aShapes.add sh, sh.name, , lastnam
+            End If
+        End If
+    End If
+Next sh
 ```
