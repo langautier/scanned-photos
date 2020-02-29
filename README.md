@@ -52,9 +52,10 @@ Once in word, you can select one or more photos and use buttons in the banner :
 Knowing that :
 - __caches__ will contain the ExifTool metadata output files to avoid doing too often these quite slow operation
 - __originals__ to save files before the resize
-- __journal__ as a journal of every actions done by the program
+- __journal__ of every actions done by the program
 
 # Document how it is written
+Just for the pleasure to share some solutions I used in this program
 ## Convert
 Convert is done using [ImageMagick](https://imagemagick.org/) targeting a photo properly printed on an A4 page which also means perfectly displayed on laptop or tablet.
 ```VBScript
