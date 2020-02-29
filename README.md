@@ -29,13 +29,13 @@ Once in word, you can select one or more photos and use buttons in the banner :
 - __display__ to open the photo in the MS Photo editor
 - __set date__ to set the DateTimeOriginal according to following rules 
     - '1971:04:01 00:00:01' first day of the month and one minute after midnight meaning that theses values are just set to order the photos
-    - if you have several images in your selection, minutes will be incremented to avoid having to photos in the directory with the same name
+    - if you have several images in your selection, minutes will be incremented to avoid having two photos in the directory with the same name
     - if you have set another year, the photo will be moved in the right directory (including creation if useful)
-    - after renaming, the images will be moved in the display as the right place according to your time
+    - after renaming, the images will be moved in the Word display as the right place according to your time
     - to order photos within a day, you can move using the Word cut/copy images then __set date__ on the right selection
 - __set artist__ to update the meta tag of the same name
 - __add a tag__ or __set all tags__ to update XPKeywords tag, even if I just have use it to clear previous value
-- __GPS address__ to set the location tag which is a strong *XPKeywords avoider* and well adapted with photos galleries tools.  Ok
+- __GPS address__ to set the location tag which is a strong *XPKeywords avoider* and well adapted with photos galleries tools.  Ok, this will not be as perfect as having a GPS in the camera, but at that time they were not yet invented !
     
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/setGPS.png)
 
