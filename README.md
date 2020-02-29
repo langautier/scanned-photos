@@ -17,9 +17,10 @@ As a result, two additional tools are necessary :
 Display to see this menu which allows you to:
 - select one or more photo directories
 - filter the selection according to the tags associated with the photo, the type of device or the size of the photo
-- and use command button 
--- __run__ to display in Word the selecting photos
--- __convert__ to 
+- and use command button as 
+    - __reset cache__ to delete the Exiftool cached files and force a new reading of metadata in the images files
+    - __run__ to display in Word the selecting photos
+    - __convert__ to resize all images over the targeted size
 
 ![Test Image 4](https://github.com/langautier/scanned-photos/blob/master/mainscreen.png)
 
